@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/csshululogin.css "type="text/css">
+	<link rel="icon" href="images/huluLogo.png"> 
+	<title>Hulu | HOME</title>
+		<style>
+			body{
+				margin:0;
+				padding:0;
+				background: #000;
+			}
+			header{
+				background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+				 url(images/banner.jpg);
+				width:100%;
+				height:100%;
+				background-position:center;
+				background-size:cover;
+				padding-bottom: 40px;
+			}
+			.headerInner{
+				background: linear-gradient(black,transparent);
+			}
+			.menuBar{
+				
+				height:100%;
+				width: 90%;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+			}
+			.logo{
+				width:20%;
+			}
+			.menuBar img{
+				width:100%;
+			}
+			.menu {
+				background:grey;
+				width:40px;
+				height: 40px;
+				border-radius: 10px;
+				padding-right: 5px;
+				padding-left: 5px;
+				cursor: pointer;
+			}
+			.menu p{
+				color:#fff;
+				font-size: 13px;
+				line-height: 10px;
+			}
+			.headerInner2{
+				width: 70%;
+				margin: 50px auto 0;
+			}
+			.headerInner2 img{
+				width: 100%;
+				
+			}
+			.headerInner2 h4{
+				color: #23f890;
+				text-align: center;
+				font-size: 12px;
+			}
+			.headerInner2 h2{
+				color:#fff;
+				text-align: center;
+				font-size: 17px;
+				font-weight: normal;
+			}
+			.headerInner2 button{
+				color:#000;
+				text-align: center;
+				font-size: 12px;
+				background: #fff;
+				width: 100%;
+				opacity: 0.7;
+				border-radius: 10px;
+				border:none;
+				padding: 10px 0;
+			}
+			.headerInner2 p, .headerInner2 h5{
+				text-align: center;
+				font-size: 12px;
+				color:#fff;
+			}
+			.headerInner2 p{
+				font-size: 9px;
+			}
+			.headerInner2 a{
+				color:#fff;
+			}
+			.include{
+				padding-top: 60px;
+				padding-bottom: 60px;
+			}
+			.includeInner{
+				margin: 0 auto;
+				width: 70%;
+				text-align: center;
+			}
+			.includeInner h4{
+				color: #23f890;
+				font-size: 12px;
+			}
+			.includeInner h1{
+				color: #fff;
+				font-size: 20px;
+			}
+			.includeInner p{
+				color: #fff;
+				font-size: 10px;
+			} 
+			.pictures{
+				padding-bottom: 40px;
+
+			}
+			.picturesInner{
+				width: 90%;
+				margin: 0 auto;				
+			}
+			.picturesItems{
+				width: 46%;
+				display: inline-block;
+				margin-right: 7px;
+				position:relative;
+			}
+			.picturesItems img{
+				width: 100%;
+			}
+			.picturesItems2 img{
+				width:85%;
+			}
+			.picturesItems p,.picturesItems h3, .picturesItems h4,
+			 .picturesItems h2, .picturesItems h6{
+				color: #fff;
+				position: absolute;
+			}
+			.picturesItems p{
+				top:0;
+				left:15px;
+				font-size: 10px;
+			}
+			.picturesItems h3{
+				top:10px;
+				left:15px;
+				font-size: 14px;
+				line-height: 25px;
+				font-weight: normal;
+			}
+			.picturesItems h4{
+				bottom:10px;
+				left:15px;
+				font-size: 8px;
+				opacity: 0.6;
+				font-weight: normal;
+			}
+			.picturesItems h2{
+				bottom:10px;
+				right:15px;
+				font-size: 9px;
+			}
+			.picturesItems span{
+				background: #fff;
+				color:black;
+				border-radius: 50%;
+			}
+			.picturesItems h6{
+				bottom:-25px;
+				left:0px;
+				font-size: 6px;
+				opacity: 0.8;
+			}
+			.include2{
+				margin-top: 60px;
+				margin-bottom: 60px;
+			}
+			.include2Inner{
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.include2Inner h4{
+				color: #23f890;
+				font-size: 13px;
+			}
+			.include2Inner h1{
+				color:#fff;
+				font-size: 30px;
+			}
+			.include2Inner h3{
+				color:#fff;
+				font-size: 17px;
+				font-weight: normal;
+			}
+			.include2Inner p{
+				color:grey;
+				font-size: 11px;
+				font-weight: normal;
+			}.include2Inner a{
+				color:white;
+			}
+			#arrowDown{
+				animation: down 1s ease-in infinite forwards;
+				transform: rotateZ(70deg);
+			}
+			@keyframes down{
+				from{
+					transform: translateY(0px);
+				}
+				to{
+					transform: translateY(20px);
+				}
+			}
+			.liveSports{
+				height: 100vh;
+				background: url(images/bg1.jpg);
+				background-size: cover;
+				background-position: center;
+				margin-bottom: 20px;
+			}
+			.liveSportsInner{
+				margin: 0 auto;
+				width: 300px;
+				color: white;
+			}
+			.liveSportsHeader ul{
+				display: flex;
+			}
+			.liveSportsHeader ul li{
+				list-style-type: none;
+				margin-right: 20px;
+				width: 250px;
+				font-size: 9px;
+				margin-top: 7%;
+				text-align: center;
+				cursor: pointer;
+			}
+			#liveBtn{
+				width:210px;
+				border-bottom: 5px solid white;
+			}
+			.plans{
+				color: white;
+				padding-bottom: 60px;
+			}
+			.plansHeader{
+				border-bottom: 1px solid grey;
+				padding:20px 0;
+			}
+			.plansHeaderInner{
+				width:70%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.plansHeaderInner h1{
+				font-size: 30px;
+				margin:0;
+			}
+			.plansHeaderInner p{
+				font-size: 14px;
+			}
+			.plansHeaderInner h3{
+				font-size: 16px;
+				margin:0;
+				font-weight: bold;
+			}
+
+			.plansHeader2{
+				border-bottom: 1px solid grey;
+
+				margin: 0 auto;
+			}
+			.plansToggle{
+				border-bottom: 1px solid grey;
+				padding:20px 0 20px;
+				flex-basis: 40%;
+			}
+			.plansSelectNew{
+				flex-basis: 60%;
+				display: flex;
+				justify-content: space-between;
+			}
+			.plansSelectOne{
+				/*border-bottom: 1px solid grey;*/
+				padding:20px 0;
+				flex-basis: 48%;
+
+			}
+			.plansSelectTwo{
+				border-left: 1px solid grey;
+				padding:20px 0;
+				flex-basis: 48%;
+			
+			}
+			.plansToggleInner{
+				width:80%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.plansToggleInner h3{
+				font-size: 13px;
+				margin:0;
+			}
+			.plansToggleImg{
+				width:150px;
+				display: flex;
+				height: 50px;
+				margin: 0 auto;
+			}
+			.plansToggleImg img{
+				width: 50%;
+			}
+			.plansSelect{
+				border-bottom: 1px solid grey;
+			
+			}
+			.plansSelectInner{
+				width: 90%;
+				margin: 0 auto;
+				display: flex;
+			}
+			.plansSelect1{
+				flex-basis: 50%;
+				padding-top: 15px;
+				text-align: center;
+				padding-bottom:20px;
+			}
+			.plansSelect2{
+				flex-basis: 50%;
+				text-align: center;
+				padding-top: 40px;
+				/*border-left: 1px solid grey;   */
+				padding-bottom:20px;
+			}
+			.plansSelect1 .h6Btn{
+				background: #23f890;
+				border:none;
+				padding: 6px 10px;
+				font-size: 10px;
+				font-weight: normal;
+				border-radius: 20px;
+			}
+			.plansSelect1 h5, .plansSelect2 h5{
+				color:grey;
+				font-size: 12px;
+			}
+			.plansSelect1 h4, .plansSelect2 h4{
+				color:white;
+				font-size: 18px;
+			}
+			.plansSelect1 .plansBtn, .plansSelect2 .plansBtn{
+				color:black;
+				background: grey;
+				font-size: 16px;
+				border:none;
+				width: 90%;
+				border-radius: 5px;
+				padding: 15px 0px;
+				font-weight: bolder;
+			}
+			.plans1{
+				border-bottom: 1px solid grey;
+			}
+			.plans1Inner{
+				margin: 0 auto;
+			}
+			.plans1Header{
+				width: 50%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.plans1Body{
+				display: flex;
+				text-align: center;
+			}
+			.plans1Body p{
+				flex-basis: 50%;
+				font-size: 16px;
+			}
+			.plans1Body .plansDivide{
+				flex-basis: 52%;
+				font-size: 16px;
+				padding-top: 15px;
+				border-right: 1px solid grey;
+				color:#23f890;
+			}
+			.plans1BodyColor p{
+				color:#23f890;
+			}
+			.plans1BodyGrey{
+				color: grey;
+				font-size: 12px;
+				text-align: center;
+				margin: 0 auto;
+				border-bottom: 1px solid grey;
+			}
+			.plans1InnerAdd{
+				font-size: 18px;
+				text-align: center;
+				margin: 0 auto;
+				border-bottom: 1px solid grey;		
+			}
+			.plans1InnerAdd h3{
+			font-weight: normal;
+			}
+			footer{
+				background: white;
+				color: grey;
+				padding:20px 0;
+			}
+			.footerInner{
+				width:90%;
+				margin:0 auto;
+			}
+			.footerPart1{
+				border-bottom: 1px solid grey;
+				padding-bottom: 40px;
+				margin-bottom: 25px;
+				width:90%;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+
+			}
+			.footerPart1 .footerItems{
+				width:140px;
+				display: inline-block;
+			}
+			.footerItems ul li{
+				font-size: 14px;
+				list-style-type: none;
+				line-height: 20px;
+			}
+			.footerPart1 .footHead{
+				color: black;
+				font-weight: bold;
+				font-size: 15px;
+			}
+			.footerPart1 h4{
+				margin-bottom: -30px;
+				margin-left: 8%;
+			}
+			.footerLinks ul{
+				grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			}
+			.footerLinks ul li{
+				display: inline-block;
+				margin-right: 30px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			.footerImg{
+				margin-top: 30px;
+				margin-left: 40px;
+			}
+			.footerImg img{
+				margin-right: 20px;
+			}
+
+
+			
+
+			@media only screen and (min-width: 750px){
+							.logo{
+				width:10%;
+				}
+				.menu {
+				background:grey;
+				width:40px;
+				height: 40px;
+				border-radius: 10px;
+				padding-right: 10px;
+				padding-left: 5px;
+				margin-top: 20px;
+				}
+				.menu p{
+				color:#fff;
+				font-size: 16px;
+				line-height: 10px;
+				}
+				.headerInner2 h4{
+				color: #23f890;
+				text-align: center;
+				font-size: 18px;
+				}
+				.headerInner2 h2{
+				color:#fff;
+				text-align: center;
+				font-size: 27px;
+				font-weight: normal;
+				}
+				.headerInner2 button{
+				color:#000;
+				text-align: center;
+				font-size: 20px;
+				background: #fff;
+				width: 100%;
+				opacity: 0.7;
+				border-radius: 10px;
+				border:none;
+				padding: 15px 0;
+				}
+				.headerInner2 p, .headerInner2 h5{
+				text-align: center;
+				font-size: 18px;
+				color:#fff;
+				}
+				.headerInner2 p{
+				font-size: 12px;
+				}
+				.includeInner h4{
+				color: #23f890;
+				font-size: 18px;
+				}
+				.includeInner h1{
+					color: #fff;
+					font-size: 38px;
+				}
+				.includeInner p{
+					color: #fff;
+					font-size: 16px;
+				}
+				.picturesItems{
+				width: 23%;
+				display: inline-block;
+				margin-right: 7px;
+				}
+				.picturesItems img{
+				width: 100%;
+				}
+				.include2Inner h4{
+				color: #23f890;
+				font-size: 16px;
+				}
+				.include2Inner h1{
+					color:#fff;
+					font-size: 45px;
+				}
+				.include2Inner h3{
+					color:#fff;
+					font-size: 22px;
+					font-weight: normal;
+				}
+				.include2Inner p{
+					color:grey;
+					font-size: 12px;
+					font-weight: normal;
+				}
+				.picturesItems h6{
+				font-size: 7px;
+				}
+				.liveSports{
+				background-position: initial;
+				}
+				.liveSportsInner{
+				width: 500px;
+				margin:initial;
+				margin-left: 80px;
+				padding-top: 130px;
+				}
+				.liveSportsHeader ul li{
+				margin-right: 40px;
+				width: 100px;
+				font-size: 12px;
+				}
+				#liveBtn{
+				width:75px;
+				}
+				.plansHeader2{
+				display: flex;
+				border-bottom: 1px solid grey;
+				width: 80%;
+				margin: 0 auto;
+				}
+				.plansToggle{
+					/*border-bottom: 1px solid grey;*/
+					padding:110px 0 20px;
+					flex-basis: 40%;
+				}
+				.plansSelectNew{
+					flex-basis: 60%;
+					display: flex;
+					justify-content: space-between;
+				}
+				.plansSelectOne{
+					/*border-bottom: 1px solid grey;*/
+					padding:20px 0;
+					flex-basis: 48%;
+					background: #c4c1c4;
+				}
+				.plansSelectTwo{
+					/*border-bottom: 1px solid grey;*/
+					padding:20px 0;
+					flex-basis: 48%;
+						border-left: none;
+				}
+				.plansToggleImg{
+				width:250px;
+				}
+				.plans1{
+				border-bottom: none;
+				}
+				.plans1Inner{
+				display: flex;
+				width: 80%;
+				border-bottom: 1px solid grey;
+				}
+				.plans1Header{
+					flex-basis: 40%;
+					text-align: left;
+
+				}
+				.plans1Body{
+					flex-basis: 60%;
+					
+				}
+				.plans1Body .plansDivide{
+					border-right: none;
+					background: #c4c1c4;
+					flex-basis: 48%;
+				}
+				.plans1BodyGrey, .plans1InnerAdd{
+				width:80%;
+				}
+				.footerPart1 h4{
+				margin-bottom: -30px;
+				margin-left: 5%;
+				}
+				.footerImg{
+				margin-top: 30px;
+				margin-left: 50px;
+				}
+	
+
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="headerInner">
+				<div class="menuBar">
+					<div class="logo">
+						<img src="images/huluLogo.png" alt="Hulu Logo">
+					</div>
+					<div class="menu">
+						<p> MENU</p>
+					</div>
+				</div>
+			</div>
+			<div class="headerInner2">
+				<h4>BUNDLE WITH ANY HULU PLAN & SAVE</h4>
+				<img src="images/headerImage.png">
+				<h2>Get endless entertainment, live sport, and the shows and movies you love.</h2>
+				<button>GET THE DISNEY BUNDLE</button>
+				<p><a href="">What's Included?</a> See <a href="">Bundle terms.</a></p>
+				<h5><a href="">Sign up for Hulu only</a></h5>
+			</div>
+		</header>
+
+		<section class="include">
+			<div class="includeInner">
+				<h4>INCLUDED IN ALL PLANS</h4>
+				<h1>All The TV You Love</h1>
+				<p>Stream full seasons of exclusive series, current-seasons episodes, hit movies, Hulu Originals, kids shows, and more.</p>
+			</div>
+		</section>
+		
+		<section class="pictures">
+			<div class="picturesInner">
+				<div class="picturesItems picturesItems2">
+					<img src="images/img1.png">
+				</div>
+				<div class="picturesItems picturesItems2">
+					<img src="images/img2.jpg">
+					<p>New & Classic</p>
+					<h3>Movies</h3>
+					<h4>THE UNITED STATES<br> VS. BILLIE HOLIDAY</h4> 
+				</div>
+				<div class="picturesItems">
+					<img src="images/img3.png">
+				</div>
+				<div class="picturesItems">
+					<img src="images/img4.jpg">
+					<p>Add-on</p>
+					<h3>Premiums</h3>
+					<h4>BILLIONS</h4>
+					<h2><span>SHO</span>WTIME</h2> 
+					<h6>Premium Network add-ons available for an additional cost</h6>
+				</div>
+			</div>
+		</section>
+
+		<section class="include2">
+			<div class="include2Inner">
+				<h4>HULU + LIVE TV, NOW WITH DISNEY+ AND ESPN+</h4>
+				<h1>Live TV Makes It Better</h1>
+				<h3>Make the switch from cable. Get 75+ top channels on Hulu with your favorite live sports, news, and events - plus the entire Hulu streaming library. With Unlimited DVR, store Live TV recordings for up to nine months and fast-forward through your DVR content. Access endless entertainment with Disney+ and live sports with ESPN+. All three for a new price of $69.99/month.</h3>
+				<p>18+ only. Regional restrictions, blackouts and Live TV terms apply. Access content from each service separately and access ESPN+ content via Hulu. Location data required to watch certain content. Offer valid for eligible subscribers only. 
+				Unlimited DVR recording is not available for on-demand shows.</p>
+
+				<h3><a href="">VIEW CHANNELS IN YOUR AREA →</a></h3>
+
+				<h3 id="arrowDown">^</h3>
+			</div>
+		</section>
+
+		<section class="liveSports" id="liveSportsBtn">
+			<div class="liveSportsInner">
+				<div class="liveSportsHeader">
+					<ul>
+						<li id="liveBtn" onclick="livebtn()">LIVE SPORTS</li>
+						<li id="newsBtn" onclick="newsbtn()">BREAKING NEWS</li>
+						<li id="eventsBtn" onclick="eventsbtn()">BIGGEST EVENTS</li>
+					</ul>
+				</div>				
+			</div>
+		</section>	
+
+		<section class="plans">
+				<div class="plansHeader">
+					<div class="plansHeaderInner">
+						<h1>Select Your Plan</h1>
+						<p>No hidden fees, equipment rentals, or installation appointments.</p>
+						<h3>Switch plans or cancel anytime.^^</h3>
+					</div>
+				</div>
+
+				<div class="plansHeader2">
+					<div class="plansToggle">
+						<div class="plansToggleInner">
+							<h3>BASE PLANS   BUNDLE/SAVE@</h3>
+							<div class="plansToggleImg">
+								<img src="images/huluLogo.png">
+								<img src="images/headerImage.png">
+							</div>
+						</div>
+					</div>
+					<div class="plansSelectNew">
+						<div class="plansSelectOne">
+								<div class="plansSelect1">
+									<button class="h6Btn">MOST POPULAR</button>
+									<h5>30 DAY FREE TRIAL</h5>
+									<h4>Hulu</h4>
+									<button class="plansBtn">$6.99/ MONTH</button>
+								</div>
+						</div>
+						<div class="plansSelectTwo">
+								<div class="plansSelect2">
+									<h5>30 DAY FREE TRIAL</h5>
+									<h4>Hulu(No Ads)</h4>
+									<button class="plansBtn">$12.99/ MONTH</button>
+								</div>
+						</div>
+					</div>
+				</div>
+					<div class="plans1">
+						<div class="plans1Inner">
+							<div class="plans1Header">
+								<p>Monthly price</p>
+							</div>
+							<div class="plans1Body">
+								<div class="plansDivide" style="color: white;">$6.99/mo.</div>
+								<p>$12.99/mo.</p>
+							</div>
+						</div>
+					</div>
+					<div class="plans1">
+						<div class="plans1Inner">
+							<div class="plans1Header">
+								<p>Streaming Library with thousands of TV episodes and movies</p>
+							</div>
+							<div class="plans1Body plans1BodyColor">
+								<div class="plansDivide">I</div>
+								<p>I</p>
+							</div>
+						</div>
+					</div>
+					<div class="plans1">
+						<div class="plans1Inner">
+							<div class="plans1Header">
+								<p>Most new episodes the day after they air^</p>
+							</div>
+							<div class="plans1Body plans1BodyColor">
+								<div class="plansDivide">I</div>
+								<p>I</p>
+							</div>
+						</div>
+					</div>
+					<div class="plans1">
+						<div class="plans1Inner">
+							<div class="plans1Header">
+								<p>Watch on your TV, laptop, phone, or tablet</p>
+							</div>
+							<div class="plans1Body plans1BodyColor">
+								<div class="plansDivide">I</div>
+								<p>I</p>
+							</div>
+						</div>
+					</div>
+					<div class="plans1">
+						<div class="plans1Inner">
+							<div class="plans1Header">
+								<p>Up to 6 user profiles</p>
+							</div>
+							<div class="plans1Body plans1BodyColor">
+								<div class="plansDivide">I</div>
+								<p>I</p>
+							</div>
+						</div>
+					</div>
+					<div class="plans1">
+						<div class="plans1Inner">
+							<div class="plans1Header">
+								<p>Watch on 2 different screens at the same time</p>
+							</div>
+							<div class="plans1Body plans1BodyColor">
+								<div class="plansDivide">I</div>
+								<p>I</p>
+							</div>
+						</div>
+					</div>
+					<div class="plans1">
+						<div class="plans1Inner">
+							<div class="plans1Header">
+								<p>No ads in streaming library</p>
+							</div>
+							<div class="plans1Body plans1BodyColor">
+								<div class="plansDivide">I</div>
+								<p>I</p>
+							</div>
+						</div>
+					</div>
+					<div class="plans1">
+						<div class="plans1Inner">
+							<div class="plans1Header">
+								<p>Download and watch</p>
+							</div>
+							<div class="plans1Body plans1BodyColor">
+								<div class="plansDivide">I</div>
+								<p>I</p>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="plans1">
+						<div class="plans1BodyGrey">
+							<p>^For current-season shows in the streaming library only <br>
+							^^Switches from Live TV to Hulu take effect as of the next billing cycle
+							</p>
+						</div>
+					</div>
+					<div class="plans1">
+						<div class="plans1InnerAdd">
+							<h3>Show Add-ons</h3>	
+						</div>
+					</div>		
+		</section>	
+
+		<footer>
+			<div class="footerInner">
+				<div class="footerPart1">
+					<h4 class="footHead">BROWSE</h4>
+					<div class="footerItems">
+						<ul>
+							<li>Streaming Library</li>
+							<li>Live TV</li>
+							<li>Live News</li>
+							<li>Live Sports</li>
+						</ul>
+					</div>
+					<div class="footerItems">
+						<ul>
+							<li>TV Shows</li>
+							<li>Movies</li>
+							<li>Originals</li>
+							<li>Networks</li>
+							<li>Kids</li>
+							<li>FX</li>
+						</ul>
+					</div>
+					<div class="footerItems">
+						<ul>
+							<li>Kids</li>
+							<li>Cinemax</li>
+							<li>Showtime</li>
+							<li>STARZ</li>
+						</ul>
+					</div>
+					<div class="footerItems">
+						<ul>
+							<li>Hulu, Disney+, and ESPN+</li>
+							<li>Hulu (No Ads), Disney+, and ESPN+</li>
+							<li>Student Discount</li>
+						</ul>
+					</div>
+					<div class="footerItems">
+						<ul>
+							<li class="footHead">HELP</li>
+							<li>Account & Billing</li>
+							<li>Plans & Pricing</li>
+							<li>Supported Devices</li>
+							<li>Accessibility</li>
+						</ul>
+					</div>
+					<div class="footerItems">
+						<ul>
+							<li class="footHead">ABOUT US</li>
+							<li>Shop Hulu</li>
+							<li>Press</li>
+							<li>Jobs</li>
+							<li>Contact</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="footerPart2">
+					<div class="footerImg">
+						<img src="images/facebook.svg">
+						<img src="images/twitter.svg">
+						<img src="images/youtube.svg">
+						<img src="images/instagram.svg">
+					</div>
+					<div class="footerLinks">
+						<ul>
+							<li>&copy; 2022 Hulu, LLC</li>
+							<li>About Ads</li>
+							<li>Term of Use</li>
+							<li>Privacy Policy</li>
+							<li>Do Not Sell My Personal Information</li>
+							<li>Your Carlifonia Privacy Rights</li>
+							<li>TV Parent Guidelines</li>
+							<li>Sitemap</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+
+
+		<script>
+			
+			var liveSportsBtn = document.getElementById("liveSportsBtn");
+			var liveBtn = document.getElementById("liveBtn");
+			var newsBtn = document.getElementById("newsBtn");
+			var eventsBtn = document.getElementById("eventsBtn");
+
+
+			function livebtn(){
+				liveSportsBtn.style.backgroundImage ="url(images/bg1.jpg)";
+				liveBtn.style.borderBottom ="5px solid white";
+				newsBtn.style.borderBottom ="none";
+				eventsBtn.style.borderBottom ="none";
+			}
+			function newsbtn(){
+				liveSportsBtn.style.backgroundImage ="url(images/bg2.jpg)";
+				newsBtn.style.borderBottom ="5px solid white";
+				liveBtn.style.borderBottom ="none";
+				eventsBtn.style.borderBottom ="none";
+			}
+			function eventsbtn(){
+				liveSportsBtn.style.backgroundImage ="url(images/bg3.jpg)";
+				eventsBtn.style.borderBottom ="5px solid white";
+				newsBtn.style.borderBottom ="none";
+				liveBtn.style.borderBottom ="none";
+			}
+
+		</script>
+	</body>
+</html>

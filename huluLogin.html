@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/csshululogin.css "type="text/css">
+	<link rel="icon" href="images/huluLogo.png"> 
+	<title>Hulu | LOGIN</title>
+		<style>
+			body{
+				margin:0;
+				padding:0;
+				background: #F9F8F8;
+			}
+			header{
+				background:#fff;
+				height:100%;
+				width: 100%;
+			}
+			.logo{
+				width:10%;
+				margin-left:30px;
+			}
+			header img{
+				width:100%;
+			}
+			.login{
+				margin-top:40px;
+			}
+			.loginInner{
+				width:250px;
+				background:#fff;
+				margin: 0 auto;
+				padding:20px 40px;
+				box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.1);
+			}
+			.formName{
+				margin-bottom:30px;
+			}
+			.formName h2{
+				font-weight:normal;
+			}
+			form{
+				margin-bottom:60px;
+			}
+			label{
+				font-size:12px;
+				color:grey;
+				font-weight:bold;
+				margin-bottom:20px;
+			}
+			input{
+				width:100%;
+				height:50px;
+				border-radius:3px;
+				background: #E4E0D7;
+				border: 1px solid grey;
+				margin-bottom:30px;
+				margin-top:10px;
+			}
+			button{
+				width:100%;
+				height:50px;
+				border-radius:3px;
+				background: #A9A9A8;
+				border: 1px solid grey;
+				margin-bottom:30px;
+				color:white;
+				font-size:14px;
+				font-weight:bold;
+			}
+			form h4{
+				color: #7392F9;
+				margin-top:0px;
+				margin-bottom:25px;
+				font-size:14px;
+				font-weight:normal;
+			}
+			.formBody h5, .formBody p{
+				text-align:center;
+				font-size:14px;
+			}
+			.formBody h5, .formBody p{
+				color: grey;
+			}
+			.formBody p{
+				color: #25A2EC;
+				margin-top:-15px;
+			}
+			footer{
+				margin-top:140px;
+				margin-bottom: 50px;
+			}
+			.footerInner{
+				width:250px;
+				margin:0 auto;
+			}
+			.footerInner ul{
+				display:grid;
+				grid-template-columns: 1fr 1fr;
+				grid-row-gap: 25px;
+			}
+			.footerInner ul li{
+				font-size:13px;
+				list-style-type:none;
+				margin-right:20px;
+				color:grey;
+				text-align:center;
+			}
+			.footerInner a{
+				text-decoration:none;
+				color:grey;
+			}
+			.footerInner a:hover{
+			color:green;
+			}
+
+			@media only screen and (min-width: 700px){
+				.loginInner{
+				width:350px;
+				background:#fff;
+				margin: 0 auto;
+				padding:20px 40px;
+				box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.1);
+				}
+				footer{
+				margin-top:300px;
+				margin-bottom: 50px;
+				}
+				.footerInner{
+				width:500px;
+				margin:0 auto;
+				}
+				.footerInner ul{
+				display:flex;
+				
+			}
+
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="images/huluLogo.png" alt="Hulu Logo">
+			</div>
+		</header>
+		
+		<section class="login">
+			<div class="loginInner">
+				<div class="formName">
+					<h2>Log in</h2>
+				</div>			
+				<div class="formBody">
+					<form>
+						<label for="email">EMAIL</label>
+						<input type="email" name="email">
+						<label for="password">PASSWORD</label>
+						<input type="password" name="password">
+						<h4>Forgot your email or password?</h4>
+						<button type="submit">LOG IN</button>
+					</form>
+						<h5>Don't have an account? </h5>
+						<p>Start your free trial</p>
+				</div>
+			</div>
+		</section>
+				
+		<footer>
+			<div class="footerInner">
+				<ul>
+					<li><a href="" ><img src="images/adsIcon.png"></a></li>
+					<li><a href="" >About Ads</a></li>
+					<li><a href="" >Terms of Use</a></li>
+					<li><a href="" >Privacy Policy</a></li>
+					<li>©2022  Hulu</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
